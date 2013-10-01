@@ -7,6 +7,7 @@
 //
 
 #import "CandidatesListViewController.h"
+#import "FileUtil.h"
 
 @interface CandidatesListViewController ()
 
@@ -144,7 +145,7 @@
     } else if ([[segue identifier] isEqualToString:@"PushSpecificCandidate"]) {
         SearchViewController *viewController = (SearchViewController*)[segue destinationViewController];
         
-        int index = [self.tableView indexPathForCell:sender].row;
+        int index = (int)[self.tableView indexPathForCell:sender].row;
         Bookmark * bm = self.bookmarkList[index];
         
         [viewController initializeWithBookmark:bm];
@@ -153,4 +154,20 @@
 }
 
 
+- (IBAction)clickedActionButton:(id)sender {
+    NSData *data = [Bookmark toJsonList:self.bookmarkList];
+    NSArray* jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    for (NSDictionary *dict in jsonArray) {
+        Bookmark *bmm = [[Bookmark alloc] initWithJson:dict];
+        NSLog(@"%@", [bmm description]);
+    }
+    NSString *jsonString = [FileUtil data2str:data];
+    
+    UIActivityViewController *activityCtr = [[UIActivityViewController alloc] initWithActivityItems:@[jsonString]
+                                                                              applicationActivities:nil];
+    [self presentViewController:activityCtr
+                       animated:YES
+                     completion:nil];
+    NSLog(@"action");
+}
 @end

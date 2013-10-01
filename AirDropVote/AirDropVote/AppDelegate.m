@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FileUtil.h"
 
 @implementation AppDelegate
 
@@ -41,6 +42,30 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"%@",url.path);
+    NSData *jsonData = [NSData dataWithContentsOfURL:url];
+    NSString *receivedString = [FileUtil data2str:jsonData];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"received Json" message:receivedString delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    [alert show];
+    
+    NSArray *jsonList = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+    for (NSDictionary* json in jsonList) {
+        Bookmark *bm = [[Bookmark alloc] initWithJson:json];
+        if ([BookmarkDAO exists:bm]) {
+            NSLog(@"exists.");
+        } else {
+            [BookmarkDAO insert:bm];
+        }
+    }
+    
+    UINavigationController *nav = (UINavigationController*)self.window.rootViewController;
+    CandidatesListViewController *candidateVC = (CandidatesListViewController*)[nav childViewControllers][0];
+    [candidateVC.tableView reloadData];
+    return true;
 }
 
 @end

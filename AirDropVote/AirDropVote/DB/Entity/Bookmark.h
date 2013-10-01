@@ -28,8 +28,12 @@
 
 -(id)initWithTitle:(NSString*)title;
 -(id)initWithResultSet:(FMResultSet*)rs;
+-(id)initWithJson:(NSDictionary*)json;
+
+-(NSData*)toJson;
 
 +(Bookmark*)bookmarkWithBookmark:(Bookmark*)bm;
++(NSData*)toJsonList:(NSMutableArray*)bmList;
 
 -(bool)isContainedInArray:(NSMutableArray*)array;
 -(NSComparisonResult)compareByStartTime:(Bookmark*)bm;

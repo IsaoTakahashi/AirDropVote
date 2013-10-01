@@ -7,7 +7,7 @@
         <!--Candidates List View Controller - Candidates-->
         <scene sceneID="ic8-lz-ps7">
             <objects>
-                <tableViewController id="h7m-BX-mk7" customClass="CandidatesListViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CandidatesListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h7m-BX-mk7" customClass="CandidatesListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1js-VY-OFd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,6 +30,13 @@
                             <outlet property="delegate" destination="h7m-BX-mk7" id="jFU-OD-UcM"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem systemItem="action" id="hFf-B0-004">
+                            <connections>
+                                <action selector="clickedActionButton:" destination="h7m-BX-mk7" id="OP8-5X-pUe"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Candidates" id="4hO-B2-tuF">
                         <barButtonItem key="rightBarButtonItem" title="Search" id="aNH-Vv-tmR">
                             <connections>

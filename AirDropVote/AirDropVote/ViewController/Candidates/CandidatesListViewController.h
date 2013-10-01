@@ -16,4 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
 
+- (IBAction)clickedActionButton:(id)sender;
+
 @end

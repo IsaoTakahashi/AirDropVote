@@ -938,6 +938,7 @@
 				4DBEC1D617FB056B00342156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DBEC1D717FB056B00342156 /* Build configuration list for PBXNativeTarget "AirDropVoteTests" */ = {
 			isa = XCConfigurationList;
@@ -946,6 +947,7 @@
 				4DBEC1D917FB056B00342156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

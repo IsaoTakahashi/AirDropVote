@@ -90,6 +90,18 @@
     return self;
 }
 
+-(id) initWithJson:(NSDictionary*)json {
+    if (self = [self initWithTitle:[json objectForKey:@"t_title"]]) {
+        if ([json objectForKey:@"t_url"] == nil) {
+            NSLog(@"eee");
+        } else {
+            self.t_url = [json objectForKey:@"t_url"];
+        }
+    }
+    
+    return self;
+}
+
 -(bool)isContainedInArray:(NSMutableArray*)array {
     for (Bookmark *bm in array) {
         if(self.i_id == bm.i_id) return true;
@@ -106,6 +118,57 @@
     } else {
         return NSOrderedSame;
     }
+}
+
+-(NSData*)toJson {
+    NSError *error;
+    
+    NSString *jsonString = [NSString stringWithFormat:@"[{\"t_title\":\"%@\", \"t_url\":\"%@\"}]",self.t_title,self.t_url];
+    
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:
+                          [jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
+    NSLog(@"%@ %@", json, error);
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:kNilOptions error:&error];
+    
+    NSLog(@"%@ %@"
+          ,[[NSString alloc]
+            initWithData:jsonData
+            encoding:NSUTF8StringEncoding]
+          ,error);
+    
+    return jsonData;
+}
+
++(NSData*)toJsonList:(NSMutableArray*)bmList {
+    NSError *error;
+    NSString *jsonListString = @"";
+    
+    for(Bookmark *bm in bmList) {
+        if (jsonListString.length < 1) {
+            jsonListString = [jsonListString stringByAppendingString:@"["];
+        } else {
+            jsonListString = [jsonListString stringByAppendingString:@","];
+        }
+        
+        NSString *jsonString = [NSString stringWithFormat:@"{\"t_title\":\"%@\", \"t_url\":\"%@\"}",bm.t_title,bm.t_url];
+        jsonListString = [jsonListString stringByAppendingString:jsonString];
+        
+    }
+    jsonListString = [jsonListString stringByAppendingString:@"]"];
+    
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:
+                          [jsonListString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:kNilOptions error:&error];
+    
+    NSLog(@"%@ %@"
+          ,[[NSString alloc]
+            initWithData:jsonData
+            encoding:NSUTF8StringEncoding]
+          ,error);
+    
+    return jsonData;
 }
 
 @end
