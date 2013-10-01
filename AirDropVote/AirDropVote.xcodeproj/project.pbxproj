@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DA52B5017FAFC820094375D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B4F17FAFC820094375D /* Foundation.framework */; };
+		4DA52B5217FAFC820094375D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B5117FAFC820094375D /* CoreGraphics.framework */; };
+		4DA52B5417FAFC820094375D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B5317FAFC820094375D /* UIKit.framework */; };
+		4DA52B5A17FAFC820094375D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DA52B5817FAFC820094375D /* InfoPlist.strings */; };
+		4DA52B5C17FAFC820094375D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA52B5B17FAFC820094375D /* main.m */; };
+		4DA52B6017FAFC820094375D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA52B5F17FAFC820094375D /* AppDelegate.m */; };
+		4DA52B6317FAFC820094375D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA52B6117FAFC820094375D /* Main.storyboard */; };
+		4DA52B6617FAFC820094375D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA52B6517FAFC820094375D /* ViewController.m */; };
+		4DA52B6817FAFC820094375D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA52B6717FAFC820094375D /* Images.xcassets */; };
+		4DA52B6F17FAFC820094375D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B6E17FAFC820094375D /* XCTest.framework */; };
+		4DA52B7017FAFC820094375D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B4F17FAFC820094375D /* Foundation.framework */; };
+		4DA52B7117FAFC820094375D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B5317FAFC820094375D /* UIKit.framework */; };
+		4DA52B7917FAFC820094375D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DA52B7717FAFC820094375D /* InfoPlist.strings */; };
+		4DA52B7B17FAFC820094375D /* AirDropVoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA52B7A17FAFC820094375D /* AirDropVoteTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DA52B7217FAFC820094375D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA52B4417FAFC820094375D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DA52B4B17FAFC820094375D;
+			remoteInfo = AirDropVote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4DA52B4C17FAFC820094375D /* AirDropVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirDropVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA52B4F17FAFC820094375D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4DA52B5117FAFC820094375D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4DA52B5317FAFC820094375D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4DA52B5717FAFC820094375D /* AirDropVote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirDropVote-Info.plist"; sourceTree = "<group>"; };
+		4DA52B5917FAFC820094375D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4DA52B5B17FAFC820094375D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4DA52B5D17FAFC820094375D /* AirDropVote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirDropVote-Prefix.pch"; sourceTree = "<group>"; };
+		4DA52B5E17FAFC820094375D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4DA52B5F17FAFC820094375D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4DA52B6217FAFC820094375D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DA52B6417FAFC820094375D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4DA52B6517FAFC820094375D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4DA52B6717FAFC820094375D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4DA52B6D17FAFC820094375D /* AirDropVoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirDropVoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA52B6E17FAFC820094375D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4DA52B7617FAFC820094375D /* AirDropVoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirDropVoteTests-Info.plist"; sourceTree = "<group>"; };
+		4DA52B7817FAFC820094375D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4DA52B7A17FAFC820094375D /* AirDropVoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirDropVoteTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DA52B4917FAFC820094375D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B5217FAFC820094375D /* CoreGraphics.framework in Frameworks */,
+				4DA52B5417FAFC820094375D /* UIKit.framework in Frameworks */,
+				4DA52B5017FAFC820094375D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA52B6A17FAFC820094375D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B6F17FAFC820094375D /* XCTest.framework in Frameworks */,
+				4DA52B7117FAFC820094375D /* UIKit.framework in Frameworks */,
+				4DA52B7017FAFC820094375D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DA52B4317FAFC820094375D = {
+			isa = PBXGroup;
+			children = (
+				4DA52B5517FAFC820094375D /* AirDropVote */,
+				4DA52B7417FAFC820094375D /* AirDropVoteTests */,
+				4DA52B4E17FAFC820094375D /* Frameworks */,
+				4DA52B4D17FAFC820094375D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DA52B4D17FAFC820094375D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B4C17FAFC820094375D /* AirDropVote.app */,
+				4DA52B6D17FAFC820094375D /* AirDropVoteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DA52B4E17FAFC820094375D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B4F17FAFC820094375D /* Foundation.framework */,
+				4DA52B5117FAFC820094375D /* CoreGraphics.framework */,
+				4DA52B5317FAFC820094375D /* UIKit.framework */,
+				4DA52B6E17FAFC820094375D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DA52B5517FAFC820094375D /* AirDropVote */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B5E17FAFC820094375D /* AppDelegate.h */,
+				4DA52B5F17FAFC820094375D /* AppDelegate.m */,
+				4DA52B6117FAFC820094375D /* Main.storyboard */,
+				4DA52B6417FAFC820094375D /* ViewController.h */,
+				4DA52B6517FAFC820094375D /* ViewController.m */,
+				4DA52B6717FAFC820094375D /* Images.xcassets */,
+				4DA52B5617FAFC820094375D /* Supporting Files */,
+			);
+			path = AirDropVote;
+			sourceTree = "<group>";
+		};
+		4DA52B5617FAFC820094375D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B5717FAFC820094375D /* AirDropVote-Info.plist */,
+				4DA52B5817FAFC820094375D /* InfoPlist.strings */,
+				4DA52B5B17FAFC820094375D /* main.m */,
+				4DA52B5D17FAFC820094375D /* AirDropVote-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DA52B7417FAFC820094375D /* AirDropVoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B7A17FAFC820094375D /* AirDropVoteTests.m */,
+				4DA52B7517FAFC820094375D /* Supporting Files */,
+			);
+			path = AirDropVoteTests;
+			sourceTree = "<group>";
+		};
+		4DA52B7517FAFC820094375D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B7617FAFC820094375D /* AirDropVoteTests-Info.plist */,
+				4DA52B7717FAFC820094375D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DA52B4B17FAFC820094375D /* AirDropVote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DA52B7E17FAFC830094375D /* Build configuration list for PBXNativeTarget "AirDropVote" */;
+			buildPhases = (
+				4DA52B4817FAFC820094375D /* Sources */,
+				4DA52B4917FAFC820094375D /* Frameworks */,
+				4DA52B4A17FAFC820094375D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirDropVote;
+			productName = AirDropVote;
+			productReference = 4DA52B4C17FAFC820094375D /* AirDropVote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DA52B6C17FAFC820094375D /* AirDropVoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DA52B8117FAFC830094375D /* Build configuration list for PBXNativeTarget "AirDropVoteTests" */;
+			buildPhases = (
+				4DA52B6917FAFC820094375D /* Sources */,
+				4DA52B6A17FAFC820094375D /* Frameworks */,
+				4DA52B6B17FAFC820094375D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DA52B7317FAFC820094375D /* PBXTargetDependency */,
+			);
+			name = AirDropVoteTests;
+			productName = AirDropVoteTests;
+			productReference = 4DA52B6D17FAFC820094375D /* AirDropVoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DA52B4417FAFC820094375D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "高橋 勲";
+				TargetAttributes = {
+					4DA52B6C17FAFC820094375D = {
+						TestTargetID = 4DA52B4B17FAFC820094375D;
+					};
+				};
+			};
+			buildConfigurationList = 4DA52B4717FAFC820094375D /* Build configuration list for PBXProject "AirDropVote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DA52B4317FAFC820094375D;
+			productRefGroup = 4DA52B4D17FAFC820094375D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DA52B4B17FAFC820094375D /* AirDropVote */,
+				4DA52B6C17FAFC820094375D /* AirDropVoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DA52B4A17FAFC820094375D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B6817FAFC820094375D /* Images.xcassets in Resources */,
+				4DA52B5A17FAFC820094375D /* InfoPlist.strings in Resources */,
+				4DA52B6317FAFC820094375D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA52B6B17FAFC820094375D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B7917FAFC820094375D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DA52B4817FAFC820094375D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B6617FAFC820094375D /* ViewController.m in Sources */,
+				4DA52B6017FAFC820094375D /* AppDelegate.m in Sources */,
+				4DA52B5C17FAFC820094375D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA52B6917FAFC820094375D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B7B17FAFC820094375D /* AirDropVoteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DA52B7317FAFC820094375D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DA52B4B17FAFC820094375D /* AirDropVote */;
+			targetProxy = 4DA52B7217FAFC820094375D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4DA52B5817FAFC820094375D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DA52B5917FAFC820094375D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4DA52B6117FAFC820094375D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DA52B6217FAFC820094375D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4DA52B7717FAFC820094375D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DA52B7817FAFC820094375D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DA52B7C17FAFC830094375D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4DA52B7D17FAFC830094375D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DA52B7F17FAFC830094375D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDropVote/AirDropVote-Prefix.pch";
+				INFOPLIST_FILE = "AirDropVote/AirDropVote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4DA52B8017FAFC830094375D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDropVote/AirDropVote-Prefix.pch";
+				INFOPLIST_FILE = "AirDropVote/AirDropVote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4DA52B8217FAFC830094375D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AirDropVote.app/AirDropVote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDropVote/AirDropVote-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AirDropVoteTests/AirDropVoteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4DA52B8317FAFC830094375D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AirDropVote.app/AirDropVote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDropVote/AirDropVote-Prefix.pch";
+				INFOPLIST_FILE = "AirDropVoteTests/AirDropVoteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DA52B4717FAFC820094375D /* Build configuration list for PBXProject "AirDropVote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DA52B7C17FAFC830094375D /* Debug */,
+				4DA52B7D17FAFC830094375D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DA52B7E17FAFC830094375D /* Build configuration list for PBXNativeTarget "AirDropVote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DA52B7F17FAFC830094375D /* Debug */,
+				4DA52B8017FAFC830094375D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4DA52B8117FAFC830094375D /* Build configuration list for PBXNativeTarget "AirDropVoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DA52B8217FAFC830094375D /* Debug */,
+				4DA52B8317FAFC830094375D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DA52B4417FAFC820094375D /* Project object */;
+}
