@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DA52B0C17FAF4230094375D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B0B17FAF4230094375D /* Foundation.framework */; };
+		4DA52B0E17FAF4230094375D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B0D17FAF4230094375D /* CoreGraphics.framework */; };
+		4DA52B1017FAF4230094375D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B0F17FAF4230094375D /* UIKit.framework */; };
+		4DA52B1617FAF4230094375D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DA52B1417FAF4230094375D /* InfoPlist.strings */; };
+		4DA52B1817FAF4230094375D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA52B1717FAF4230094375D /* main.m */; };
+		4DA52B1C17FAF4240094375D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA52B1B17FAF4240094375D /* AppDelegate.m */; };
+		4DA52B1F17FAF4240094375D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA52B1D17FAF4240094375D /* Main.storyboard */; };
+		4DA52B2217FAF4240094375D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA52B2117FAF4240094375D /* FirstViewController.m */; };
+		4DA52B2517FAF4240094375D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA52B2417FAF4240094375D /* SecondViewController.m */; };
+		4DA52B2717FAF4240094375D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA52B2617FAF4240094375D /* Images.xcassets */; };
+		4DA52B2E17FAF4240094375D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B2D17FAF4240094375D /* XCTest.framework */; };
+		4DA52B2F17FAF4240094375D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B0B17FAF4230094375D /* Foundation.framework */; };
+		4DA52B3017FAF4240094375D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA52B0F17FAF4230094375D /* UIKit.framework */; };
+		4DA52B3817FAF4240094375D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DA52B3617FAF4240094375D /* InfoPlist.strings */; };
+		4DA52B3A17FAF4240094375D /* AirDropVotingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA52B3917FAF4240094375D /* AirDropVotingTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DA52B3117FAF4240094375D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DA52B0017FAF4230094375D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DA52B0717FAF4230094375D;
+			remoteInfo = AirDropVoting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4DA52B0817FAF4230094375D /* AirDropVoting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirDropVoting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA52B0B17FAF4230094375D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4DA52B0D17FAF4230094375D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4DA52B0F17FAF4230094375D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4DA52B1317FAF4230094375D /* AirDropVoting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirDropVoting-Info.plist"; sourceTree = "<group>"; };
+		4DA52B1517FAF4230094375D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4DA52B1717FAF4230094375D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4DA52B1917FAF4240094375D /* AirDropVoting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirDropVoting-Prefix.pch"; sourceTree = "<group>"; };
+		4DA52B1A17FAF4240094375D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4DA52B1B17FAF4240094375D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4DA52B1E17FAF4240094375D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DA52B2017FAF4240094375D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		4DA52B2117FAF4240094375D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		4DA52B2317FAF4240094375D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		4DA52B2417FAF4240094375D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		4DA52B2617FAF4240094375D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4DA52B2C17FAF4240094375D /* AirDropVotingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirDropVotingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA52B2D17FAF4240094375D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4DA52B3517FAF4240094375D /* AirDropVotingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirDropVotingTests-Info.plist"; sourceTree = "<group>"; };
+		4DA52B3717FAF4240094375D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4DA52B3917FAF4240094375D /* AirDropVotingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirDropVotingTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DA52B0517FAF4230094375D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B0E17FAF4230094375D /* CoreGraphics.framework in Frameworks */,
+				4DA52B1017FAF4230094375D /* UIKit.framework in Frameworks */,
+				4DA52B0C17FAF4230094375D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA52B2917FAF4240094375D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B2E17FAF4240094375D /* XCTest.framework in Frameworks */,
+				4DA52B3017FAF4240094375D /* UIKit.framework in Frameworks */,
+				4DA52B2F17FAF4240094375D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DA52AFF17FAF4230094375D = {
+			isa = PBXGroup;
+			children = (
+				4DA52B1117FAF4230094375D /* AirDropVoting */,
+				4DA52B3317FAF4240094375D /* AirDropVotingTests */,
+				4DA52B0A17FAF4230094375D /* Frameworks */,
+				4DA52B0917FAF4230094375D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DA52B0917FAF4230094375D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B0817FAF4230094375D /* AirDropVoting.app */,
+				4DA52B2C17FAF4240094375D /* AirDropVotingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DA52B0A17FAF4230094375D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B0B17FAF4230094375D /* Foundation.framework */,
+				4DA52B0D17FAF4230094375D /* CoreGraphics.framework */,
+				4DA52B0F17FAF4230094375D /* UIKit.framework */,
+				4DA52B2D17FAF4240094375D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DA52B1117FAF4230094375D /* AirDropVoting */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B1A17FAF4240094375D /* AppDelegate.h */,
+				4DA52B1B17FAF4240094375D /* AppDelegate.m */,
+				4DA52B1D17FAF4240094375D /* Main.storyboard */,
+				4DA52B2017FAF4240094375D /* FirstViewController.h */,
+				4DA52B2117FAF4240094375D /* FirstViewController.m */,
+				4DA52B2317FAF4240094375D /* SecondViewController.h */,
+				4DA52B2417FAF4240094375D /* SecondViewController.m */,
+				4DA52B2617FAF4240094375D /* Images.xcassets */,
+				4DA52B1217FAF4230094375D /* Supporting Files */,
+			);
+			path = AirDropVoting;
+			sourceTree = "<group>";
+		};
+		4DA52B1217FAF4230094375D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B1317FAF4230094375D /* AirDropVoting-Info.plist */,
+				4DA52B1417FAF4230094375D /* InfoPlist.strings */,
+				4DA52B1717FAF4230094375D /* main.m */,
+				4DA52B1917FAF4240094375D /* AirDropVoting-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DA52B3317FAF4240094375D /* AirDropVotingTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B3917FAF4240094375D /* AirDropVotingTests.m */,
+				4DA52B3417FAF4240094375D /* Supporting Files */,
+			);
+			path = AirDropVotingTests;
+			sourceTree = "<group>";
+		};
+		4DA52B3417FAF4240094375D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DA52B3517FAF4240094375D /* AirDropVotingTests-Info.plist */,
+				4DA52B3617FAF4240094375D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DA52B0717FAF4230094375D /* AirDropVoting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DA52B3D17FAF4240094375D /* Build configuration list for PBXNativeTarget "AirDropVoting" */;
+			buildPhases = (
+				4DA52B0417FAF4230094375D /* Sources */,
+				4DA52B0517FAF4230094375D /* Frameworks */,
+				4DA52B0617FAF4230094375D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirDropVoting;
+			productName = AirDropVoting;
+			productReference = 4DA52B0817FAF4230094375D /* AirDropVoting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DA52B2B17FAF4240094375D /* AirDropVotingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DA52B4017FAF4240094375D /* Build configuration list for PBXNativeTarget "AirDropVotingTests" */;
+			buildPhases = (
+				4DA52B2817FAF4240094375D /* Sources */,
+				4DA52B2917FAF4240094375D /* Frameworks */,
+				4DA52B2A17FAF4240094375D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DA52B3217FAF4240094375D /* PBXTargetDependency */,
+			);
+			name = AirDropVotingTests;
+			productName = AirDropVotingTests;
+			productReference = 4DA52B2C17FAF4240094375D /* AirDropVotingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DA52B0017FAF4230094375D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "高橋 勲";
+				TargetAttributes = {
+					4DA52B2B17FAF4240094375D = {
+						TestTargetID = 4DA52B0717FAF4230094375D;
+					};
+				};
+			};
+			buildConfigurationList = 4DA52B0317FAF4230094375D /* Build configuration list for PBXProject "AirDropVoting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DA52AFF17FAF4230094375D;
+			productRefGroup = 4DA52B0917FAF4230094375D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DA52B0717FAF4230094375D /* AirDropVoting */,
+				4DA52B2B17FAF4240094375D /* AirDropVotingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DA52B0617FAF4230094375D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B2717FAF4240094375D /* Images.xcassets in Resources */,
+				4DA52B1617FAF4230094375D /* InfoPlist.strings in Resources */,
+				4DA52B1F17FAF4240094375D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA52B2A17FAF4240094375D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B3817FAF4240094375D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DA52B0417FAF4230094375D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B2517FAF4240094375D /* SecondViewController.m in Sources */,
+				4DA52B1C17FAF4240094375D /* AppDelegate.m in Sources */,
+				4DA52B2217FAF4240094375D /* FirstViewController.m in Sources */,
+				4DA52B1817FAF4230094375D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA52B2817FAF4240094375D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA52B3A17FAF4240094375D /* AirDropVotingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DA52B3217FAF4240094375D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DA52B0717FAF4230094375D /* AirDropVoting */;
+			targetProxy = 4DA52B3117FAF4240094375D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4DA52B1417FAF4230094375D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DA52B1517FAF4230094375D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4DA52B1D17FAF4240094375D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DA52B1E17FAF4240094375D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4DA52B3617FAF4240094375D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DA52B3717FAF4240094375D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DA52B3B17FAF4240094375D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4DA52B3C17FAF4240094375D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DA52B3E17FAF4240094375D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDropVoting/AirDropVoting-Prefix.pch";
+				INFOPLIST_FILE = "AirDropVoting/AirDropVoting-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4DA52B3F17FAF4240094375D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDropVoting/AirDropVoting-Prefix.pch";
+				INFOPLIST_FILE = "AirDropVoting/AirDropVoting-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4DA52B4117FAF4240094375D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AirDropVoting.app/AirDropVoting";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDropVoting/AirDropVoting-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AirDropVotingTests/AirDropVotingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4DA52B4217FAF4240094375D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AirDropVoting.app/AirDropVoting";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDropVoting/AirDropVoting-Prefix.pch";
+				INFOPLIST_FILE = "AirDropVotingTests/AirDropVotingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DA52B0317FAF4230094375D /* Build configuration list for PBXProject "AirDropVoting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DA52B3B17FAF4240094375D /* Debug */,
+				4DA52B3C17FAF4240094375D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DA52B3D17FAF4240094375D /* Build configuration list for PBXNativeTarget "AirDropVoting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DA52B3E17FAF4240094375D /* Debug */,
+				4DA52B3F17FAF4240094375D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4DA52B4017FAF4240094375D /* Build configuration list for PBXNativeTarget "AirDropVotingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DA52B4117FAF4240094375D /* Debug */,
+				4DA52B4217FAF4240094375D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DA52B0017FAF4230094375D /* Project object */;
+}
