@@ -31,6 +31,7 @@ static const NSString *baseURLString = @"https://www.google.co.jp/search";
 }
 
 -(void)initializeWithBookmark:(Bookmark*)bm {
+    
     self.bookmark = bm;
     
     if (self.bookmark.i_base_service <= 0) {
@@ -43,13 +44,16 @@ static const NSString *baseURLString = @"https://www.google.co.jp/search";
     
     if (![self.bookmark.t_url isEmpty]) {
         [self searchOnWebViewWithURL:[NSURL URLWithString:self.bookmark.t_url]];
-    } else if (![self.searchBar.text isEmpty]) {
+    } else if (![self.bookmark.t_title isEmpty]) {
         [self searchOnWebView:self.bsType];
     }
 }
 
 -(void)searchOnWebViewWithURL:(NSURL*)url {
-    if (url != nil) {
+    if (url != nil && self.webView != nil) {
+        if (self.bookmark != nil) {
+            self.navigationItem.title = self.bookmark.t_title;
+        }
         [MBProgressHUD showHUDAddedTo:self.webView animated:YES];
         [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     }
@@ -75,20 +79,28 @@ static const NSString *baseURLString = @"https://www.google.co.jp/search";
     [self searchOnWebViewWithURL:url];
 }
 
-#pragma mark -
-#pragma mark SearchBar Delegate
--(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
-    [self searchOnWebView:self.bsType];
-}
-
--(void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar {
+-(void)setBookmarkInfoWithPage {
     NSString* title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     NSString* url = [self.webView stringByEvaluatingJavaScriptFromString:@"document.URL"];
     
     self.bookmark.t_title = title;
     self.bookmark.i_base_service = self.bsType;
     self.bookmark.t_url = url;
-    
+}
+
+#pragma mark -
+#pragma mark SearchBar Delegate
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self searchOnWebView:self.bsType];
+    [self.searchBar resignFirstResponder];
+}
+
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    [self searchOnWebView:self.bsType];
+}
+
+-(void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar {
+    [self setBookmarkInfoWithPage];
     [self.delegate selectedBookmarkURL:self.bookmark];
 }
 
@@ -112,6 +124,12 @@ static const NSString *baseURLString = @"https://www.google.co.jp/search";
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    if (![self.bookmark.t_url isEmpty]) {
+        [self searchOnWebViewWithURL:[NSURL URLWithString:self.bookmark.t_url]];
+    } else if (![self.bookmark.t_title isEmpty]) {
+        [self searchOnWebView:self.bsType];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -120,4 +138,10 @@ static const NSString *baseURLString = @"https://www.google.co.jp/search";
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)clickedBookmarkButton:(id)sender {
+    [self setBookmarkInfoWithPage];
+    NSLog(@"B!");
+    [self.delegate selectedBookmarkURL:self.bookmark];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

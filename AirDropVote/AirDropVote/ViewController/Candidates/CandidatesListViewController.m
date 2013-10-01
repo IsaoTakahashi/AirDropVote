@@ -26,6 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.bookmarkList = [NSMutableArray new];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,24 +46,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    self.bookmarkList = [BookmarkDAO selectAll];
+    return self.bookmarkList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"CandidateCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    Bookmark *bm = self.bookmarkList[indexPath.row];
+    cell.textLabel.text = bm.t_title;
     
     return cell;
 }
@@ -116,5 +118,39 @@
 }
 
  */
+
+#pragma mark -
+#pragma mark SearchViewControllerDelegate
+-(void)selectedBookmarkURL:(Bookmark*)bm {
+    if ([BookmarkDAO exists:bm]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Bookmark" message:@"This bookmark is already exists" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alertView show];
+    } else {
+        [BookmarkDAO insert:bm];
+        [self.tableView reloadData];
+    }
+}
+
+#pragma mark -
+#pragma mark segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"PushSearchButton"]) {
+        SearchViewController *viewController = (SearchViewController*)[segue destinationViewController];
+        
+        Bookmark * bm = [[Bookmark alloc] initWithTitle:@""];
+        
+        [viewController initializeWithBookmark:bm];
+        viewController.delegate = self;
+    } else if ([[segue identifier] isEqualToString:@"PushSpecificCandidate"]) {
+        SearchViewController *viewController = (SearchViewController*)[segue destinationViewController];
+        
+        int index = [self.tableView indexPathForCell:sender].row;
+        Bookmark * bm = self.bookmarkList[index];
+        
+        [viewController initializeWithBookmark:bm];
+        viewController.delegate = self;
+    }
+}
+
 
 @end

@@ -15,7 +15,7 @@ CREATE TABLE dbinfo (
 --bookmark
 CREATE TABLE BOOKMARK (
 	   i_id INTEGER PRIMARY KEY
-	 , t_title TEXT NOT NULL,
+	 , t_title TEXT NOT NULL
      , t_place TEXT NOT NULL
      , r_latitude REAL
      , r_longitude REAL
@@ -29,4 +29,14 @@ CREATE TABLE BOOKMARK (
 	 , i_del_flg integer NOT NULL
 );
 
-INSERT INTO dbinfo (id, version) VALUES (1, '4');
+--bookmark score
+CREATE TABLE BOOKMARK_SCORE (
+	 , t_title TEXT NOT NULL
+     , t_url TEXT NOT NULL
+     , t_user TEXT NOT NULL
+     , d_insert DATETIME NOT NULL
+	 , i_del_flg integer NOT NULL
+     , PRIMARY KEY(t_title,t_url,t_user)
+);
+
+INSERT INTO dbinfo (id, version) VALUES (1, '5');

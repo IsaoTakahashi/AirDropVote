@@ -11,6 +11,23 @@
 
 @implementation BookmarkDAO
 
++(bool)exists:(Bookmark*)bookmark {
+    SimpleDBManager* db = [SimpleDBManager getInstance];
+    
+    FMResultSet *rs = [db.connection executeQuery:@"SELECT * FROM BOOKMARK \
+                       WHERE t_title = ? AND t_url = ?",
+                       bookmark.t_title,
+                       bookmark.t_url
+                       ];
+    [db hadError];
+    
+    if([rs next]) {
+        return true;
+    }
+    
+    return false;
+}
+
 +(bool)insert:(Bookmark*)bookmark {
     SimpleDBManager* db = [SimpleDBManager getInstance];
     bool insert_flg = false;
@@ -35,7 +52,7 @@
     } else {
         insert_flg = [db.connection executeUpdate:@"INSERT INTO BOOKMARK \
                 (t_title,t_place,r_latitude,r_longitude,d_start_date,r_start_time,r_end_time,i_base_service,t_url,d_insert,i_del_flg) \
-                VALUES (?,?,?,?,?,?,?,?,?)",
+                VALUES (?,?,?,?,?,?,?,?,?,?,?)",
                 bookmark.t_title,bookmark.t_place,
                 [NSNumber numberWithDouble:bookmark.r_latitude],
                 [NSNumber numberWithDouble:bookmark.r_longitude],

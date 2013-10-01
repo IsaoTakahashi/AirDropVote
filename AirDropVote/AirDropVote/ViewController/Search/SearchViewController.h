@@ -35,4 +35,6 @@ typedef enum BookmarkServiceType : NSUInteger {
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bookMarkButton;
 
+- (IBAction)clickedBookmarkButton:(id)sender;
+
 @end

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchViewController.h"
+#import "BookmarkDAO.h"
 
-@interface CandidatesListViewController : UITableViewController
+@interface CandidatesListViewController : UITableViewController<SearchViewControllerDelegate>
+
+@property (strong, nonatomic) NSMutableArray *bookmarkList;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
 
 @end

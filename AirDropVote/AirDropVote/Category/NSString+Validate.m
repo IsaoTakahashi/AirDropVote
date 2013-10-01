@@ -13,11 +13,11 @@
 - (Boolean) isEmpty {
     if (self != nil) {
         if (self.length > 0) {
-            return true;
+            return false;
         }
     }
     
-    return false;
+    return true;
 }
 
 

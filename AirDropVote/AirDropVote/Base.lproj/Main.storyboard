@@ -13,13 +13,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Yfg-LF-Aa9">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CandidateCell" id="Yfg-LF-Aa9">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yfg-LF-Aa9" id="uVc-E4-VVm">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="PushSpecificCandidate" trigger="accessoryAction" id="Wd7-Ky-v4E"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,10 +33,13 @@
                     <navigationItem key="navigationItem" title="Candidates" id="4hO-B2-tuF">
                         <barButtonItem key="rightBarButtonItem" title="Search" id="aNH-Vv-tmR">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="push" id="exw-Bb-XRv"/>
+                                <segue destination="vXZ-lx-hvc" kind="push" identifier="PushSearchButton" id="exw-Bb-XRv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchButton" destination="aNH-Vv-tmR" id="u1f-vD-OEe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VK2-pO-j0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,21 +57,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ap1-3U-Y9C">
+                            <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ap1-3U-Y9C">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="iXi-5c-mNj"/>
+                                </connections>
                             </searchBar>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-Ax-NLg">
                                 <rect key="frame" x="0.0" y="110" width="320" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="AvJ-FQ-lJ2"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="f47-4G-5Xd">
-                        <barButtonItem key="rightBarButtonItem" title="B!" id="nnm-k5-DrH"/>
+                        <barButtonItem key="rightBarButtonItem" title="B!" id="nnm-k5-DrH">
+                            <connections>
+                                <action selector="clickedBookmarkButton:" destination="vXZ-lx-hvc" id="YVc-G3-iDC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bookMarkButton" destination="nnm-k5-DrH" id="OkE-U3-CWU"/>
@@ -105,4 +121,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Wd7-Ky-v4E"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -12,6 +12,7 @@
 #import "SearchCondition.h"
 
 @interface BookmarkDAO : NSObject
++(bool)exists:(Bookmark*)bookmark;
 +(bool)insert:(Bookmark*)bookmark;
 +(bool)update:(Bookmark*)bookmark;
 +(NSMutableArray*)selectAll;
