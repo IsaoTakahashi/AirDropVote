@@ -1,0 +1,32 @@
+--Test Table for Query Test
+CREATE TABLE QUERY_TEST (
+	   id serial
+	 , n numeric
+	 , t text
+	 , r real
+);
+
+--データベースのバージョン情報
+CREATE TABLE dbinfo (
+    id INTEGER PRIMARY KEY,
+	version TEXT NOT NULL
+);
+
+--bookmark
+CREATE TABLE BOOKMARK (
+	   i_id INTEGER PRIMARY KEY
+	 , t_title TEXT NOT NULL,
+     , t_place TEXT NOT NULL
+     , r_latitude REAL
+     , r_longitude REAL
+     , d_start_date DATETIME
+     , d_end_date DATETIME
+     , r_start_time REAL
+     , r_end_time REAL
+     , i_base_service INTEGER
+	 , t_url text TIME
+     , d_insert DATETIME NOT NULL
+	 , i_del_flg integer NOT NULL
+);
+
+INSERT INTO dbinfo (id, version) VALUES (1, '4');
