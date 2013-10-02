@@ -7,6 +7,7 @@
 //
 
 #import "CandidatesListViewController.h"
+#import "BookmarkScoreDAO.h"
 #import "FileUtil.h"
 
 @interface CandidatesListViewController ()
@@ -67,6 +68,31 @@
     cell.textLabel.text = bm.t_title;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Bookmark* bm = self.bookmarkList[indexPath.row];
+    
+    self.ssViewCtr = [[SettingScoreViewController alloc] initWithNibName:@"SettingScoreViewController" bundle:nil];
+    
+    self.ssViewCtr.delegate = self;
+    self.ssViewCtr.bm = [Bookmark bookmarkWithBookmark:bm];
+    
+    
+    CGRect window = [[UIScreen mainScreen] bounds];
+    self.ssViewCtr.view.center = CGPointMake(window.size.width/2, window.size.height/2);
+    [self.ssViewCtr.view setAlpha:0.1];
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.2];
+    [UIView setAnimationDelay:0];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    
+    [self.ssViewCtr.view setAlpha:1.0];
+    
+    [UIView commitAnimations];
+    
+    [self.view.superview addSubview:self.ssViewCtr.view];
 }
 
 /*
@@ -170,4 +196,17 @@
                      completion:nil];
     NSLog(@"action");
 }
+
+- (void)setBookmarkScore:(BookmarkScore *)bs {
+    [self.ssViewCtr.view removeFromSuperview];
+    
+    if (bs != nil) {
+        if([BookmarkScoreDAO exists:bs]) {
+            [BookmarkScoreDAO updateScore:bs];
+        } else {
+            [BookmarkScoreDAO insert:bs];
+        }
+    }
+}
+
 @end

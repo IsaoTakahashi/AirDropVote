@@ -10,6 +10,24 @@
 
 @implementation BookmarkScoreDAO
 
++(bool)exists:(BookmarkScore*)bs {
+    SimpleDBManager* db = [SimpleDBManager getInstance];
+    
+    FMResultSet *rs = [db.connection executeQuery:@"SELECT * FROM BOOKMARK_SCORE \
+                       WHERE t_title = ? AND t_url = ? AND t_user = ?",
+                       bs.t_title,
+                       bs.t_url,
+                       [UserSettingUtil getStringWithKey:@"user_name"]
+                       ];
+    [db hadError];
+    
+    if([rs next]) {
+        return true;
+    }
+    
+    return false;
+}
+
 +(bool)insert:(BookmarkScore*)bs {
     SimpleDBManager* db = [SimpleDBManager getInstance];
     bool insert_flg = false;
@@ -44,7 +62,7 @@
     
     update_flg = [db.connection executeUpdate:@"UPDATE BOOKMARK_SCORE \
                   SET i_score = ? \
-                  WHERE t_tile =? AND t_url = ? AND t_user = ?",
+                  WHERE t_title =? AND t_url = ? AND t_user = ?",
                   [NSNumber numberWithInt:bs.i_score],
                   bs.t_title,
                   bs.t_url,
@@ -109,6 +127,23 @@
     }
     
     return bookmarkScoreArray;
+}
+
++(BookmarkScore*)selectByBookmark:(Bookmark*)bm user:(NSString*)user {
+    SimpleDBManager* db = [SimpleDBManager getInstance];
+    
+    FMResultSet *rs = [db.connection executeQuery:@"SELECT * FROM BOOKMARK_SCORE \
+                       WHERE t_title = ? AND t_url = ? AND t_user = ? AND i_del_flg = 0 ORDER BY t_user ASC",
+                       bm.t_title,bm.t_url,user];
+    [db hadError];
+    
+    if([rs next]) {
+        BookmarkScore *bs = [[BookmarkScore alloc] initWithResultSet:rs];
+        
+        return bs;
+    }
+    
+    return nil;
 }
 
 +(bool)deleteWithPK:(BookmarkScore*)bs {

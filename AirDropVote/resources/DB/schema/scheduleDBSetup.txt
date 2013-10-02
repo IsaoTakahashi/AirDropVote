@@ -31,12 +31,13 @@ CREATE TABLE BOOKMARK (
 
 --bookmark score
 CREATE TABLE BOOKMARK_SCORE (
-	 , t_title TEXT NOT NULL
+	   t_title TEXT NOT NULL
      , t_url TEXT NOT NULL
      , t_user TEXT NOT NULL
+  ,i_score INTEGER NOT NULL
      , d_insert DATETIME NOT NULL
 	 , i_del_flg integer NOT NULL
      , PRIMARY KEY(t_title,t_url,t_user)
 );
 
-INSERT INTO dbinfo (id, version) VALUES (1, '5');
+INSERT INTO dbinfo (id, version) VALUES (1, '6');

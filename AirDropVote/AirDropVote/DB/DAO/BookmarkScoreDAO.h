@@ -13,11 +13,14 @@
 
 @interface BookmarkScoreDAO : NSObject
 
+
++(bool)exists:(BookmarkScore*)bs;
 +(bool)insert:(BookmarkScore*)bs;
 +(bool)updateScore:(BookmarkScore*)bs;
 +(NSMutableArray*)selectAll;
 +(NSMutableArray*)selectByUser:(NSString*)user;
 +(NSMutableArray*)selectByBookmark:(Bookmark*)bm;
++(BookmarkScore*)selectByBookmark:(Bookmark*)bm user:(NSString*)user;
 +(bool)deleteWithPK:(BookmarkScore*)bs;
 
 @end

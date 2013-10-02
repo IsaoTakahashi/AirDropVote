@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DBD16CE17FC6BFE00AC4B73 /* UserSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD16CD17FC6BFE00AC4B73 /* UserSettingViewController.m */; };
 		4DBEC1A617FB056A00342156 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBEC1A517FB056A00342156 /* Foundation.framework */; };
 		4DBEC1A817FB056A00342156 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBEC1A717FB056A00342156 /* CoreGraphics.framework */; };
 		4DBEC1AA17FB056A00342156 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBEC1A917FB056A00342156 /* UIKit.framework */; };
@@ -65,6 +66,9 @@
 		4DBEC2B617FB286A00342156 /* BookmarkScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBEC2B517FB286A00342156 /* BookmarkScore.m */; };
 		4DBEC2B817FB2ADB00342156 /* scheduleDBUpdate_4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DBEC2B717FB2ADB00342156 /* scheduleDBUpdate_4.txt */; };
 		4DBEC2BB17FB2C4300342156 /* BookmarkScoreDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBEC2BA17FB2C4300342156 /* BookmarkScoreDAO.m */; };
+		4DC2172617FC73D10033DF60 /* SettingScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2172417FC73D10033DF60 /* SettingScoreViewController.m */; };
+		4DC2172717FC73D10033DF60 /* SettingScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2172517FC73D10033DF60 /* SettingScoreViewController.xib */; };
+		4DC2172917FC80F90033DF60 /* scheduleDBUpdate_5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2172817FC80F90033DF60 /* scheduleDBUpdate_5.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DBD16CC17FC6BFE00AC4B73 /* UserSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingViewController.h; sourceTree = "<group>"; };
+		4DBD16CD17FC6BFE00AC4B73 /* UserSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingViewController.m; sourceTree = "<group>"; };
 		4DBEC1A217FB056A00342156 /* AirDropVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirDropVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBEC1A517FB056A00342156 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4DBEC1A717FB056A00342156 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -170,6 +176,10 @@
 		4DBEC2B717FB2ADB00342156 /* scheduleDBUpdate_4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scheduleDBUpdate_4.txt; sourceTree = "<group>"; };
 		4DBEC2B917FB2C4300342156 /* BookmarkScoreDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkScoreDAO.h; sourceTree = "<group>"; };
 		4DBEC2BA17FB2C4300342156 /* BookmarkScoreDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkScoreDAO.m; sourceTree = "<group>"; };
+		4DC2172317FC73D10033DF60 /* SettingScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingScoreViewController.h; sourceTree = "<group>"; };
+		4DC2172417FC73D10033DF60 /* SettingScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingScoreViewController.m; sourceTree = "<group>"; };
+		4DC2172517FC73D10033DF60 /* SettingScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingScoreViewController.xib; sourceTree = "<group>"; };
+		4DC2172817FC80F90033DF60 /* scheduleDBUpdate_5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scheduleDBUpdate_5.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +208,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DBD16CB17FC6BD900AC4B73 /* UserSetting */ = {
+			isa = PBXGroup;
+			children = (
+				4DBD16CC17FC6BFE00AC4B73 /* UserSettingViewController.h */,
+				4DBD16CD17FC6BFE00AC4B73 /* UserSettingViewController.m */,
+			);
+			path = UserSetting;
+			sourceTree = "<group>";
+		};
 		4DBEC19917FB056A00342156 = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +369,8 @@
 		4DBEC1E217FB094600342156 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4DC2172217FC73C00033DF60 /* Score */,
+				4DBD16CB17FC6BD900AC4B73 /* UserSetting */,
 				4DBEC1E317FB094600342156 /* Candidates */,
 				4DBEC1E417FB094600342156 /* Search */,
 			);
@@ -564,6 +585,7 @@
 				4DBEC2A217FB17A000342156 /* scheduleDBUpdate_2.txt */,
 				4DBEC2A317FB17A000342156 /* scheduleDBUpdate_3.txt */,
 				4DBEC2B717FB2ADB00342156 /* scheduleDBUpdate_4.txt */,
+				4DC2172817FC80F90033DF60 /* scheduleDBUpdate_5.txt */,
 			);
 			path = schema;
 			sourceTree = "<group>";
@@ -574,6 +596,16 @@
 				4DBEC2A517FB17A000342156 /* background.jpg */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		4DC2172217FC73C00033DF60 /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				4DC2172317FC73D10033DF60 /* SettingScoreViewController.h */,
+				4DC2172417FC73D10033DF60 /* SettingScoreViewController.m */,
+				4DC2172517FC73D10033DF60 /* SettingScoreViewController.xib */,
+			);
+			path = Score;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -662,9 +694,11 @@
 				4DBEC27717FB0C1B00342156 /* FontAwesome.ttf in Resources */,
 				4DBEC1BE17FB056A00342156 /* Images.xcassets in Resources */,
 				4DBEC1B017FB056A00342156 /* InfoPlist.strings in Resources */,
+				4DC2172917FC80F90033DF60 /* scheduleDBUpdate_5.txt in Resources */,
 				4DBEC2A717FB17A000342156 /* scheduleDBSetup.txt in Resources */,
 				4DBEC29217FB0C1B00342156 /* MIT-LICENSE in Resources */,
 				4DBEC1B917FB056A00342156 /* Main.storyboard in Resources */,
+				4DC2172717FC73D10033DF60 /* SettingScoreViewController.xib in Resources */,
 				4DBEC2B817FB2ADB00342156 /* scheduleDBUpdate_4.txt in Resources */,
 				4DBEC2A617FB17A000342156 /* schedule.sqlite in Resources */,
 				4DBEC29017FB0C1B00342156 /* README in Resources */,
@@ -710,11 +744,13 @@
 				4DBEC28C17FB0C1B00342156 /* MBProgressHUD.m in Sources */,
 				4DBEC21317FB0BD000342156 /* FMDatabase.m in Sources */,
 				4DBEC1B217FB056A00342156 /* main.m in Sources */,
+				4DBD16CE17FC6BFE00AC4B73 /* UserSettingViewController.m in Sources */,
 				4DBEC29417FB0C1B00342156 /* SFHFKeychainUtils.m in Sources */,
 				4DBEC27517FB0C1B00342156 /* BButton.m in Sources */,
 				4DBEC2B317FB1A4100342156 /* CandidatesListViewController.m in Sources */,
 				4DBEC21417FB0BD000342156 /* FMDatabaseAdditions.m in Sources */,
 				4DBEC21C17FB0BD000342156 /* SimpleNetwork.m in Sources */,
+				4DC2172617FC73D10033DF60 /* SettingScoreViewController.m in Sources */,
 				4DBEC28E17FB0C1B00342156 /* R9AppDelegate.m in Sources */,
 				4DBEC22017FB0BEF00342156 /* UserSettingUtil.m in Sources */,
 				4DBEC29717FB0C8700342156 /* SearchCondition.m in Sources */,

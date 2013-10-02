@@ -25,7 +25,7 @@
 
 + (int) getIntegerWithKey:(NSString*)key
 {
-    return [[NSUserDefaults standardUserDefaults] integerForKey:key];
+    return (int)[[NSUserDefaults standardUserDefaults] integerForKey:key];
 }
 
 + (void) setIntegerWithKey:(NSString*)key value:(int)value

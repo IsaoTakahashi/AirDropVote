@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchViewController.h"
+#import "SettingScoreViewController.h"
 #import "BookmarkDAO.h"
 
-@interface CandidatesListViewController : UITableViewController<SearchViewControllerDelegate>
+@interface CandidatesListViewController : UITableViewController<SearchViewControllerDelegate,SettingScoreViewControllerDelegate>
 
 @property (strong, nonatomic) NSMutableArray *bookmarkList;
+@property (nonatomic) SettingScoreViewController *ssViewCtr;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
 

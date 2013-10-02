@@ -52,6 +52,7 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"received Json" message:receivedString delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     [alert show];
     
+    // Inserting Data from Json
     NSArray *jsonList = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
     for (NSDictionary* json in jsonList) {
         Bookmark *bm = [[Bookmark alloc] initWithJson:json];
@@ -62,6 +63,7 @@
         }
     }
     
+    //Refresh Candidates Table
     UINavigationController *nav = (UINavigationController*)self.window.rootViewController;
     CandidatesListViewController *candidateVC = (CandidatesListViewController*)[nav childViewControllers][0];
     [candidateVC.tableView reloadData];

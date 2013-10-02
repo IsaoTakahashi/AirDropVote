@@ -4,6 +4,46 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
+        <!--User Setting View Controller - Setting-->
+        <scene sceneID="cwD-bH-UrR">
+            <objects>
+                <viewController id="wUe-Ur-dMK" customClass="UserSettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gXA-R4-g7F"/>
+                        <viewControllerLayoutGuide type="bottom" id="hhd-nW-iCg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Sp-TS-POy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="90h-Vz-CpA">
+                                <rect key="frame" x="14" y="142" width="285" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wUe-Ur-dMK" id="1Bo-Zp-vxo"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIH-vl-rMm">
+                                <rect key="frame" x="20" y="113" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Setting" id="mPj-Dh-ib0"/>
+                    <connections>
+                        <outlet property="userNameField" destination="90h-Vz-CpA" id="sjc-Fu-X1d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lvD-jD-y9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="-671"/>
+        </scene>
         <!--Candidates List View Controller - Candidates-->
         <scene sceneID="ic8-lz-ps7">
             <objects>
@@ -38,7 +78,12 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Candidates" id="4hO-B2-tuF">
-                        <barButtonItem key="rightBarButtonItem" title="Search" id="aNH-Vv-tmR">
+                        <barButtonItem key="leftBarButtonItem" title="Setting" id="Xfa-zY-z6C">
+                            <connections>
+                                <segue destination="wUe-Ur-dMK" kind="push" id="ogp-ud-a2q"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="aNH-Vv-tmR">
                             <connections>
                                 <segue destination="vXZ-lx-hvc" kind="push" identifier="PushSearchButton" id="exw-Bb-XRv"/>
                             </connections>
@@ -57,8 +102,8 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AqM-VP-rFG"/>
-                        <viewControllerLayoutGuide type="bottom" id="bbW-Ct-vlL"/>
+                        <viewControllerLayoutGuide type="top" id="VXl-9e-vqu"/>
+                        <viewControllerLayoutGuide type="bottom" id="zIV-yl-HAD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -98,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="-23"/>
+            <point key="canvasLocation" x="1121" y="-23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mjc-k0-nIb">
