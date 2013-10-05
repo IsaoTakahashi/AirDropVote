@@ -1,0 +1,20 @@
+--election category
+CREATE TABLE ELECTION_CATEGORY (
+	   t_title TEXT NOT NULL
+     , t_user TEXT NOT NULL
+     , d_insert DATETIME NOT NULL
+	 , i_del_flg integer NOT NULL
+     , PRIMARY KEY(t_title,t_user)
+);
+
+-- reletion between election category and candidate
+CREATE TABLE CATEGORY_CANDIDATE_RELATION (
+       t_category_title TEXT NOT NULL
+     , t_category_user TEXT NOT NULL
+     , t_candidate_title TEXT NOT NULL
+     , t_candidate_url TEXT NOT NULL
+     , i_del_flg INTEGER NOT NULL
+     , PRIMARY KEY(t_category_title, t_category_user, t_candidate_title, t_candidate_url)
+);
+
+UPDATE dbinfo SET version='7';

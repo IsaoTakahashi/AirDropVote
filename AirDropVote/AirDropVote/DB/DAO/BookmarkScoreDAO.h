@@ -21,6 +21,6 @@
 +(NSMutableArray*)selectByUser:(NSString*)user;
 +(NSMutableArray*)selectByBookmark:(Bookmark*)bm;
 +(BookmarkScore*)selectByBookmark:(Bookmark*)bm user:(NSString*)user;
-+(bool)deleteWithPK:(BookmarkScore*)bs;
++(bool)deleteByPK:(BookmarkScore*)bs;
 
 @end

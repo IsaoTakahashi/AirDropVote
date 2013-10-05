@@ -8,6 +8,7 @@
 
 #import "UserSettingViewController.h"
 #import "UserSettingUtil.h"
+#import "UserSettingConstants.h"
 
 @interface UserSettingViewController ()
 
@@ -29,7 +30,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSString* userName = [UserSettingUtil getStringWithKey:@"user_name"];
+    NSString* userName = [UserSettingUtil getStringWithKey:USER_NAME];
     if (userName != nil) {
         self.userNameField.text = userName;
     }
@@ -44,7 +45,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     
-    [UserSettingUtil setStringWithKey:@"user_name" value:textField.text];
+    [UserSettingUtil setStringWithKey:USER_NAME value:textField.text];
     
     [self.navigationController popViewControllerAnimated:YES];
     return false;

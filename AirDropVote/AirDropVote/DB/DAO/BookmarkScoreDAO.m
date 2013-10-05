@@ -146,14 +146,14 @@
     return nil;
 }
 
-+(bool)deleteWithPK:(BookmarkScore*)bs {
++(bool)deleteByPK:(BookmarkScore*)bs {
     SimpleDBManager* db = [SimpleDBManager getInstance];
     bool delete_flg = false;
     
     NSLog(@"delete target bookmark score =");
     NSLog(@"%@",[bs description]);
     
-    delete_flg =  [db.connection executeUpdate:@"DELETE FROM BOOKMARK WHERE t_tile = ? AND t_url = ? AND t_user = ?",
+    delete_flg =  [db.connection executeUpdate:@"DELETE FROM BOOKMARK_SCORE WHERE t_tile = ? AND t_url = ? AND t_user = ?",
                    bs.t_title,bs.t_url,bs.t_user];
     [db hadError];
     [db commit];

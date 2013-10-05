@@ -158,6 +158,12 @@
     }
 }
 
+#pragma makr -
+#pragma mark AddCandidateListViewControllerDelegate
+-(void)addCandidate:(Bookmark *)bm {
+    [self.tableView reloadData];
+}
+
 #pragma mark -
 #pragma mark segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -175,6 +181,10 @@
         Bookmark * bm = self.bookmarkList[index];
         
         [viewController initializeWithBookmark:bm];
+        viewController.delegate = self;
+    } else if ([[segue identifier] isEqualToString:@"AddCandidateSegue"]) {
+        AddCandidateListViewController *viewController = (AddCandidateListViewController*)[segue destinationViewController];
+        viewController.electionCategory = self.electionCategory;
         viewController.delegate = self;
     }
 }

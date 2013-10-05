@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D3F96A517FFECB600CFDC18 /* ElectionCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F96A417FFECB600CFDC18 /* ElectionCategory.m */; };
+		4D3F96A817FFED4B00CFDC18 /* ElectionCategoryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F96A717FFED4B00CFDC18 /* ElectionCategoryDAO.m */; };
+		4D3F96AB17FFF07100CFDC18 /* CreateCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F96AA17FFF07100CFDC18 /* CreateCategoryViewController.m */; };
+		4D3F96AF17FFF2AC00CFDC18 /* UserSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F96AE17FFF2AC00CFDC18 /* UserSettingConstants.m */; };
+		4D3F96B117FFFA6800CFDC18 /* scheduleDBUpdate_6.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D3F96B017FFFA6800CFDC18 /* scheduleDBUpdate_6.txt */; };
+		4D3F96B41800129C00CFDC18 /* CategoryCandidateRelation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F96B31800129C00CFDC18 /* CategoryCandidateRelation.m */; };
+		4D3F96B7180013BF00CFDC18 /* CategoryCandidateRelationDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F96B6180013BF00CFDC18 /* CategoryCandidateRelationDAO.m */; };
+		4D3F96BD18001C4600CFDC18 /* AddCandidateListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F96BC18001C4600CFDC18 /* AddCandidateListViewController.m */; };
 		4DBD16CE17FC6BFE00AC4B73 /* UserSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD16CD17FC6BFE00AC4B73 /* UserSettingViewController.m */; };
+		4DBD8CF717FFD2F4004CBD3B /* AirVote_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DBD8CF617FFD2F4004CBD3B /* AirVote_Icon.png */; };
+		4DBD8CFB17FFEA92004CBD3B /* CategoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD8CFA17FFEA92004CBD3B /* CategoryListViewController.m */; };
 		4DBEC1A617FB056A00342156 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBEC1A517FB056A00342156 /* Foundation.framework */; };
 		4DBEC1A817FB056A00342156 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBEC1A717FB056A00342156 /* CoreGraphics.framework */; };
 		4DBEC1AA17FB056A00342156 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBEC1A917FB056A00342156 /* UIKit.framework */; };
@@ -82,8 +92,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D3F96A317FFECB600CFDC18 /* ElectionCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectionCategory.h; sourceTree = "<group>"; };
+		4D3F96A417FFECB600CFDC18 /* ElectionCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectionCategory.m; sourceTree = "<group>"; };
+		4D3F96A617FFED4B00CFDC18 /* ElectionCategoryDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectionCategoryDAO.h; sourceTree = "<group>"; };
+		4D3F96A717FFED4B00CFDC18 /* ElectionCategoryDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectionCategoryDAO.m; sourceTree = "<group>"; };
+		4D3F96A917FFF07100CFDC18 /* CreateCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateCategoryViewController.h; sourceTree = "<group>"; };
+		4D3F96AA17FFF07100CFDC18 /* CreateCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateCategoryViewController.m; sourceTree = "<group>"; };
+		4D3F96AD17FFF2AC00CFDC18 /* UserSettingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingConstants.h; sourceTree = "<group>"; };
+		4D3F96AE17FFF2AC00CFDC18 /* UserSettingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingConstants.m; sourceTree = "<group>"; };
+		4D3F96B017FFFA6800CFDC18 /* scheduleDBUpdate_6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scheduleDBUpdate_6.txt; sourceTree = "<group>"; };
+		4D3F96B21800129C00CFDC18 /* CategoryCandidateRelation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCandidateRelation.h; sourceTree = "<group>"; };
+		4D3F96B31800129C00CFDC18 /* CategoryCandidateRelation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCandidateRelation.m; sourceTree = "<group>"; };
+		4D3F96B5180013BF00CFDC18 /* CategoryCandidateRelationDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCandidateRelationDAO.h; sourceTree = "<group>"; };
+		4D3F96B6180013BF00CFDC18 /* CategoryCandidateRelationDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCandidateRelationDAO.m; sourceTree = "<group>"; };
+		4D3F96BB18001C4600CFDC18 /* AddCandidateListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCandidateListViewController.h; sourceTree = "<group>"; };
+		4D3F96BC18001C4600CFDC18 /* AddCandidateListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCandidateListViewController.m; sourceTree = "<group>"; };
 		4DBD16CC17FC6BFE00AC4B73 /* UserSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingViewController.h; sourceTree = "<group>"; };
 		4DBD16CD17FC6BFE00AC4B73 /* UserSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingViewController.m; sourceTree = "<group>"; };
+		4DBD8CF617FFD2F4004CBD3B /* AirVote_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AirVote_Icon.png; sourceTree = "<group>"; };
+		4DBD8CF917FFEA92004CBD3B /* CategoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryListViewController.h; sourceTree = "<group>"; };
+		4DBD8CFA17FFEA92004CBD3B /* CategoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryListViewController.m; sourceTree = "<group>"; };
 		4DBEC1A217FB056A00342156 /* AirDropVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirDropVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBEC1A517FB056A00342156 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4DBEC1A717FB056A00342156 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -208,6 +236,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D3F96AC17FFF28C00CFDC18 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4D3F96AD17FFF2AC00CFDC18 /* UserSettingConstants.h */,
+				4D3F96AE17FFF2AC00CFDC18 /* UserSettingConstants.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		4DBD16CB17FC6BD900AC4B73 /* UserSetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +252,24 @@
 				4DBD16CD17FC6BFE00AC4B73 /* UserSettingViewController.m */,
 			);
 			path = UserSetting;
+			sourceTree = "<group>";
+		};
+		4DBD8CF817FFEA4E004CBD3B /* CategoryList */ = {
+			isa = PBXGroup;
+			children = (
+				4DBD8CF917FFEA92004CBD3B /* CategoryListViewController.h */,
+				4DBD8CFA17FFEA92004CBD3B /* CategoryListViewController.m */,
+				4D3F96A917FFF07100CFDC18 /* CreateCategoryViewController.h */,
+				4D3F96AA17FFF07100CFDC18 /* CreateCategoryViewController.m */,
+			);
+			path = CategoryList;
+			sourceTree = "<group>";
+		};
+		4DBD8CFC17FFEB04004CBD3B /* CategoryList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CategoryList;
 			sourceTree = "<group>";
 		};
 		4DBEC19917FB056A00342156 = {
@@ -253,6 +308,7 @@
 		4DBEC1AB17FB056A00342156 /* AirDropVote */ = {
 			isa = PBXGroup;
 			children = (
+				4D3F96AC17FFF28C00CFDC18 /* Constants */,
 				4DBEC22117FB0C1A00342156 /* ExternalLibrary */,
 				4DBEC21D17FB0BEF00342156 /* UserSetting */,
 				4DBEC1E817FB0BD000342156 /* Category */,
@@ -336,6 +392,7 @@
 		4DBEC1DE17FB094600342156 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4DBD8CFC17FFEB04004CBD3B /* CategoryList */,
 				4DBEC1DF17FB094600342156 /* Candidates */,
 				4DBEC1E017FB094600342156 /* Common */,
 				4DBEC1E117FB094600342156 /* Search */,
@@ -369,6 +426,7 @@
 		4DBEC1E217FB094600342156 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4DBD8CF817FFEA4E004CBD3B /* CategoryList */,
 				4DC2172217FC73C00033DF60 /* Score */,
 				4DBD16CB17FC6BD900AC4B73 /* UserSetting */,
 				4DBEC1E317FB094600342156 /* Candidates */,
@@ -382,6 +440,8 @@
 			children = (
 				4DBEC2B117FB1A4100342156 /* CandidatesListViewController.h */,
 				4DBEC2B217FB1A4100342156 /* CandidatesListViewController.m */,
+				4D3F96BB18001C4600CFDC18 /* AddCandidateListViewController.h */,
+				4D3F96BC18001C4600CFDC18 /* AddCandidateListViewController.m */,
 			);
 			path = Candidates;
 			sourceTree = "<group>";
@@ -439,6 +499,10 @@
 				4DBEC1F417FB0BD000342156 /* BookmarkDAO.m */,
 				4DBEC2B917FB2C4300342156 /* BookmarkScoreDAO.h */,
 				4DBEC2BA17FB2C4300342156 /* BookmarkScoreDAO.m */,
+				4D3F96A617FFED4B00CFDC18 /* ElectionCategoryDAO.h */,
+				4D3F96A717FFED4B00CFDC18 /* ElectionCategoryDAO.m */,
+				4D3F96B5180013BF00CFDC18 /* CategoryCandidateRelationDAO.h */,
+				4D3F96B6180013BF00CFDC18 /* CategoryCandidateRelationDAO.m */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -450,6 +514,10 @@
 				4DBEC1F717FB0BD000342156 /* Bookmark.m */,
 				4DBEC2B417FB286A00342156 /* BookmarkScore.h */,
 				4DBEC2B517FB286A00342156 /* BookmarkScore.m */,
+				4D3F96A317FFECB600CFDC18 /* ElectionCategory.h */,
+				4D3F96A417FFECB600CFDC18 /* ElectionCategory.m */,
+				4D3F96B21800129C00CFDC18 /* CategoryCandidateRelation.h */,
+				4D3F96B31800129C00CFDC18 /* CategoryCandidateRelation.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -586,6 +654,7 @@
 				4DBEC2A317FB17A000342156 /* scheduleDBUpdate_3.txt */,
 				4DBEC2B717FB2ADB00342156 /* scheduleDBUpdate_4.txt */,
 				4DC2172817FC80F90033DF60 /* scheduleDBUpdate_5.txt */,
+				4D3F96B017FFFA6800CFDC18 /* scheduleDBUpdate_6.txt */,
 			);
 			path = schema;
 			sourceTree = "<group>";
@@ -593,6 +662,7 @@
 		4DBEC2A417FB17A000342156 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				4DBD8CF617FFD2F4004CBD3B /* AirVote_Icon.png */,
 				4DBEC2A517FB17A000342156 /* background.jpg */,
 			);
 			path = image;
@@ -688,8 +758,10 @@
 				4DBEC21817FB0BD000342156 /* README in Resources */,
 				4DBEC2AA17FB17A000342156 /* scheduleDBUpdate_3.txt in Resources */,
 				4DBEC2A817FB17A000342156 /* scheduleDBUpdate_1.txt in Resources */,
+				4DBD8CF717FFD2F4004CBD3B /* AirVote_Icon.png in Resources */,
 				4DBEC29317FB0C1B00342156 /* ReadMe in Resources */,
 				4DBEC2A917FB17A000342156 /* scheduleDBUpdate_2.txt in Resources */,
+				4D3F96B117FFFA6800CFDC18 /* scheduleDBUpdate_6.txt in Resources */,
 				4DBEC2AB17FB17A000342156 /* background.jpg in Resources */,
 				4DBEC27717FB0C1B00342156 /* FontAwesome.ttf in Resources */,
 				4DBEC1BE17FB056A00342156 /* Images.xcassets in Resources */,
@@ -724,10 +796,13 @@
 				4DBEC21A17FB0BD000342156 /* FileUtil.m in Sources */,
 				4DBEC21117FB0BD000342156 /* BookmarkDAO.m in Sources */,
 				4DBEC20E17FB0BD000342156 /* NSString+URLEncoding.m in Sources */,
+				4D3F96AF17FFF2AC00CFDC18 /* UserSettingConstants.m in Sources */,
 				4DBEC21517FB0BD000342156 /* FMDatabasePool.m in Sources */,
 				4DBEC27617FB0C1B00342156 /* NSString+FontAwesome.m in Sources */,
+				4D3F96B7180013BF00CFDC18 /* CategoryCandidateRelationDAO.m in Sources */,
 				4DBEC21B17FB0BD000342156 /* Base64Util.m in Sources */,
 				4DBEC21617FB0BD000342156 /* FMDatabaseQueue.m in Sources */,
+				4D3F96B41800129C00CFDC18 /* CategoryCandidateRelation.m in Sources */,
 				4DBEC27817FB0C1B00342156 /* UIColor+BButton.m in Sources */,
 				4DBEC1BC17FB056A00342156 /* ViewController.m in Sources */,
 				4DBEC21217FB0BD000342156 /* Bookmark.m in Sources */,
@@ -736,18 +811,23 @@
 				4DBEC21917FB0BD000342156 /* SimpleDBManager.m in Sources */,
 				4DBEC21017FB0BD000342156 /* UIImage+Edit.m in Sources */,
 				4DBEC1B617FB056A00342156 /* AppDelegate.m in Sources */,
+				4D3F96AB17FFF07100CFDC18 /* CreateCategoryViewController.m in Sources */,
 				4DBEC21717FB0BD000342156 /* FMResultSet.m in Sources */,
 				4DBEC20F17FB0BD000342156 /* NSString+Validate.m in Sources */,
+				4D3F96A517FFECB600CFDC18 /* ElectionCategory.m in Sources */,
 				4DBEC1E717FB09AE00342156 /* SearchViewController.m in Sources */,
 				4DBEC2BB17FB2C4300342156 /* BookmarkScoreDAO.m in Sources */,
 				4DBEC29117FB0C1B00342156 /* RegexKitLite.m in Sources */,
+				4D3F96BD18001C4600CFDC18 /* AddCandidateListViewController.m in Sources */,
 				4DBEC28C17FB0C1B00342156 /* MBProgressHUD.m in Sources */,
 				4DBEC21317FB0BD000342156 /* FMDatabase.m in Sources */,
 				4DBEC1B217FB056A00342156 /* main.m in Sources */,
+				4D3F96A817FFED4B00CFDC18 /* ElectionCategoryDAO.m in Sources */,
 				4DBD16CE17FC6BFE00AC4B73 /* UserSettingViewController.m in Sources */,
 				4DBEC29417FB0C1B00342156 /* SFHFKeychainUtils.m in Sources */,
 				4DBEC27517FB0C1B00342156 /* BButton.m in Sources */,
 				4DBEC2B317FB1A4100342156 /* CandidatesListViewController.m in Sources */,
+				4DBD8CFB17FFEA92004CBD3B /* CategoryListViewController.m in Sources */,
 				4DBEC21417FB0BD000342156 /* FMDatabaseAdditions.m in Sources */,
 				4DBEC21C17FB0BD000342156 /* SimpleNetwork.m in Sources */,
 				4DC2172617FC73D10033DF60 /* SettingScoreViewController.m in Sources */,
@@ -878,7 +958,6 @@
 		4DBEC1D517FB056B00342156 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AirDropVote/AirDropVote-Prefix.pch";
@@ -899,7 +978,6 @@
 		4DBEC1D617FB056B00342156 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AirDropVote/AirDropVote-Prefix.pch";

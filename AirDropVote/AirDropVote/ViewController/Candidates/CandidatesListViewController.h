@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "SearchViewController.h"
 #import "SettingScoreViewController.h"
+#import "AddCandidateListViewController.h"
 #import "BookmarkDAO.h"
+#import "ElectionCategory.h"
 
-@interface CandidatesListViewController : UITableViewController<SearchViewControllerDelegate,SettingScoreViewControllerDelegate>
+@interface CandidatesListViewController : UITableViewController<SearchViewControllerDelegate,SettingScoreViewControllerDelegate,AddCandidateListViewControllerDelegate>
 
+@property (nonatomic) ElectionCategory *electionCategory;
 @property (strong, nonatomic) NSMutableArray *bookmarkList;
 @property (nonatomic) SettingScoreViewController *ssViewCtr;
 
