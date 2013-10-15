@@ -38,4 +38,16 @@
     return self;
 }
 
+-(id)initWithCategory:(ElectionCategory*)ec Bookmark:(Bookmark*)bm {
+    
+    if (self = [super init]) {
+        self.t_category_title = ec.t_title;
+        self.t_category_user = ec.t_user;
+        self.t_candidate_title = bm.t_title;
+        self.t_candidate_url = bm.t_url;
+    }
+    
+    return self;
+}
+
 @end

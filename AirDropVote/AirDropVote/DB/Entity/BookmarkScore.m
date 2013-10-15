@@ -10,16 +10,14 @@
 
 @implementation BookmarkScore
 
--(id)initWithJson:(NSArray*)jsonObject {
+-(id)initWithJson:(NSDictionary*)jsonObject {
     if(self = [super init]) {
-        for (NSDictionary *obj in jsonObject) {
-            self.t_title = [obj objectForKey:@"t_title"];
-            self.t_url = [obj objectForKey:@"t_url"];
-            self.t_user = [obj objectForKey:@"t_user"];
-            self.i_score = [[obj objectForKey:@"i_score"] intValue];
-            
-            self.i_del_flg = 0;
-        }
+        self.t_title = [jsonObject objectForKey:@"t_title"];
+        self.t_url = [jsonObject objectForKey:@"t_url"];
+        self.t_user = [jsonObject objectForKey:@"t_user"];
+        self.i_score = [[jsonObject objectForKey:@"i_score"] intValue];
+        
+        self.i_del_flg = 0;
     }
     
     return self;

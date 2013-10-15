@@ -15,6 +15,6 @@
     @property(nonatomic) NSDate* d_insert;
     @property(nonatomic) int i_del_flg;
 
--(id)initWithJson:(NSArray*)jsonObject;
+-(id)initWithJson:(NSDictionary*)jsonObject;
 -(id)initWithResultSet:(FMResultSet*)rs;
 @end

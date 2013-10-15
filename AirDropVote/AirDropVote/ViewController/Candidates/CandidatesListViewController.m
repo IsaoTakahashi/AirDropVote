@@ -9,6 +9,7 @@
 #import "CandidatesListViewController.h"
 #import "BookmarkScoreDAO.h"
 #import "FileUtil.h"
+#import "JsonResolver.h"
 
 @interface CandidatesListViewController ()
 
@@ -54,7 +55,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    self.bookmarkList = [BookmarkDAO selectAll];
+    if (self.electionCategory == nil || [self.electionCategory.t_title isEqual:@"All"]) {
+        self.bookmarkList = [BookmarkDAO selectAll];
+        self.addCandidateButton.enabled = false;
+        self.searchButton.enabled = false;
+    } else {
+        self.bookmarkList = [CategoryCandidateRelationDAO selectCandidatesByCategory:self.electionCategory];
+        self.addCandidateButton.enabled = true;
+        self.searchButton.enabled = true;
+        
+        NSData *jsonData = [JsonResolver createJsonAllDataFromCategory:self.electionCategory];
+        [JsonResolver resolveAndInsertDataFromJson:jsonData];
+    }
+    
     return self.bookmarkList.count;
 }
 
@@ -154,6 +167,10 @@
         [alertView show];
     } else {
         [BookmarkDAO insert:bm];
+        CategoryCandidateRelation *ccs = [[CategoryCandidateRelation alloc] initWithCategory:self.electionCategory Bookmark:bm];
+        
+        [CategoryCandidateRelationDAO insert:ccs];
+        
         [self.tableView reloadData];
     }
 }

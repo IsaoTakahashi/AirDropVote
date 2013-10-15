@@ -115,6 +115,8 @@ static const NSString *baseURLString = @"https://www.google.co.jp/search";
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    NSLog(@"Error %li", (long)error.code);
+    if (error.code == NSURLErrorCancelled) return; // this is Error -999
     [MBProgressHUD hideAllHUDsForView:self.webView animated:YES];
 }
 

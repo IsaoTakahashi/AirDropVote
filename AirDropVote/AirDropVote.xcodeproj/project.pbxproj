@@ -79,6 +79,7 @@
 		4DC2172617FC73D10033DF60 /* SettingScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2172417FC73D10033DF60 /* SettingScoreViewController.m */; };
 		4DC2172717FC73D10033DF60 /* SettingScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2172517FC73D10033DF60 /* SettingScoreViewController.xib */; };
 		4DC2172917FC80F90033DF60 /* scheduleDBUpdate_5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2172817FC80F90033DF60 /* scheduleDBUpdate_5.txt */; };
+		4DC5D094180D25CF00E866AB /* JsonResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5D093180D25CF00E866AB /* JsonResolver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +209,8 @@
 		4DC2172417FC73D10033DF60 /* SettingScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingScoreViewController.m; sourceTree = "<group>"; };
 		4DC2172517FC73D10033DF60 /* SettingScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingScoreViewController.xib; sourceTree = "<group>"; };
 		4DC2172817FC80F90033DF60 /* scheduleDBUpdate_5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scheduleDBUpdate_5.txt; sourceTree = "<group>"; };
+		4DC5D092180D25CF00E866AB /* JsonResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonResolver.h; sourceTree = "<group>"; };
+		4DC5D093180D25CF00E866AB /* JsonResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonResolver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +381,8 @@
 		4DBEC1DC17FB094600342156 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4DC5D092180D25CF00E866AB /* JsonResolver.h */,
+				4DC5D093180D25CF00E866AB /* JsonResolver.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -801,6 +806,7 @@
 				4DBEC27617FB0C1B00342156 /* NSString+FontAwesome.m in Sources */,
 				4D3F96B7180013BF00CFDC18 /* CategoryCandidateRelationDAO.m in Sources */,
 				4DBEC21B17FB0BD000342156 /* Base64Util.m in Sources */,
+				4DC5D094180D25CF00E866AB /* JsonResolver.m in Sources */,
 				4DBEC21617FB0BD000342156 /* FMDatabaseQueue.m in Sources */,
 				4D3F96B41800129C00CFDC18 /* CategoryCandidateRelation.m in Sources */,
 				4DBEC27817FB0C1B00342156 /* UIColor+BButton.m in Sources */,

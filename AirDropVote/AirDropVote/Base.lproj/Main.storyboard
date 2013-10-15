@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eCG-bC-Fh2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eCG-bC-Fh2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -126,13 +126,14 @@
                                 <action selector="clickedActionButton:" destination="h7m-BX-mk7" id="OP8-5X-pUe"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Candidates" id="4hO-B2-tuF">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="aNH-Vv-tmR">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="RNW-S1-4WD"/>
+                        <barButtonItem systemItem="search" id="aNH-Vv-tmR">
                             <connections>
                                 <segue destination="vXZ-lx-hvc" kind="push" identifier="PushSearchButton" id="exw-Bb-XRv"/>
                             </connections>
                         </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Candidates" id="4hO-B2-tuF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AT8-zv-D61">
                             <connections>
                                 <segue destination="2Xx-DE-cmQ" kind="push" identifier="AddCandidateSegue" id="sLj-Ka-1yy"/>
@@ -140,6 +141,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addCandidateButton" destination="AT8-zv-D61" id="37H-fp-bRT"/>
                         <outlet property="searchButton" destination="aNH-Vv-tmR" id="u1f-vD-OEe"/>
                     </connections>
                 </tableViewController>
@@ -207,6 +209,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="&lt;-" id="9fl-mr-HjU">
+                            <connections>
+                                <action selector="goBack" destination="a4h-Ax-NLg" id="LiB-Ia-XwG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="->" id="yD4-VI-ZwV">
+                            <connections>
+                                <action selector="goForward" destination="a4h-Ax-NLg" id="qdY-Ve-voK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="refresh" id="Nuy-5Z-RJU">
+                            <connections>
+                                <action selector="reload" destination="a4h-Ax-NLg" id="Zr5-VD-QHp"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Search" id="f47-4G-5Xd">
                         <barButtonItem key="rightBarButtonItem" title="B!" id="nnm-k5-DrH">
                             <connections>
