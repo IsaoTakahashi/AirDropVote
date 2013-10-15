@@ -70,7 +70,7 @@
     return cell;
 }
 
-- (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Bookmark *bm = self.candidateList[indexPath.row];
     
     CategoryCandidateRelation *ccs = [[CategoryCandidateRelation alloc] initWithCategory:self.electionCategory Bookmark:bm];
@@ -78,6 +78,7 @@
     [CategoryCandidateRelationDAO insert:ccs];
     
     [self.tableView reloadData];
+    [self.delegate addCandidate:bm];
 }
 
 /*
@@ -119,16 +120,16 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSLog(@"popup?");
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
 
- */
 
 @end

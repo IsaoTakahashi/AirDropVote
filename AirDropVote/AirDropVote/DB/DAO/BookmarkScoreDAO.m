@@ -17,7 +17,7 @@
                        WHERE t_title = ? AND t_url = ? AND t_user = ?",
                        bs.t_title,
                        bs.t_url,
-                       [UserSettingUtil getStringWithKey:@"user_name"]
+                       bs.t_user
                        ];
     [db hadError];
     
@@ -57,7 +57,7 @@
     SimpleDBManager* db = [SimpleDBManager getInstance];
     bool update_flg = false;
     
-    NSLog(@"insert update bookmark score =");
+    NSLog(@"update bookmark score =");
     NSLog(@"%@",[bs description]);
     
     update_flg = [db.connection executeUpdate:@"UPDATE BOOKMARK_SCORE \

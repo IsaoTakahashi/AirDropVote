@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FileUtil.h"
+#import "JsonResolver.h"
 
 @implementation AppDelegate
 
@@ -53,6 +54,7 @@
     [alert show];
     
     // Inserting Data from Json
+    /*
     NSArray *jsonList = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
     for (NSDictionary* json in jsonList) {
         Bookmark *bm = [[Bookmark alloc] initWithJson:json];
@@ -61,12 +63,19 @@
         } else {
             [BookmarkDAO insert:bm];
         }
-    }
+    }*/
+    [JsonResolver resolveAndInsertDataFromJson:jsonData];
     
     //Refresh Candidates Table
     UINavigationController *nav = (UINavigationController*)self.window.rootViewController;
     CandidatesListViewController *candidateVC = (CandidatesListViewController*)[nav childViewControllers][0];
     [candidateVC.tableView reloadData];
+    
+    if ([nav childViewControllers].count > 1) {
+        CandidatesListViewController *candidateVC = (CandidatesListViewController*)[nav childViewControllers][1];
+        [candidateVC.tableView reloadData];
+    }
+
     return true;
 }
 

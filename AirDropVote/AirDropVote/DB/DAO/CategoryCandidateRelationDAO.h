@@ -18,6 +18,7 @@
 +(NSMutableArray*)selectAll;
 +(NSMutableArray*)selectByCategory:(ElectionCategory*)ec;
 +(NSMutableArray*)selectCandidatesByCategory:(ElectionCategory*)ec; //特定のカテゴリに紐付いているものだけを取得
++(NSMutableArray*)selectCandidatesByCategoryOrderedByTotalScore:(ElectionCategory*)ec;
 +(NSMutableArray*)selectCandidatesByExceptingCategory:(ElectionCategory*)ec; //特定のカテゴリに紐付いていないものだけを取得
 +(NSMutableArray*)selectByCandidate:(Bookmark*)bm;
 +(bool)deleteByPK:(CategoryCandidateRelation*)ccr;

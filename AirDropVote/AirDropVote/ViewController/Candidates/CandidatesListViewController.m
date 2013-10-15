@@ -10,6 +10,8 @@
 #import "BookmarkScoreDAO.h"
 #import "FileUtil.h"
 #import "JsonResolver.h"
+#import "TDBadgedCell.h"
+#import "UserSettingConstants.h"
 
 @interface CandidatesListViewController ()
 
@@ -31,7 +33,10 @@
     [super viewDidLoad];
     
     self.bookmarkList = [NSMutableArray new];
-
+    if (self.electionCategory != nil) {
+        self.navigationItem.title = self.electionCategory.t_title;
+    }
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -60,12 +65,12 @@
         self.addCandidateButton.enabled = false;
         self.searchButton.enabled = false;
     } else {
-        self.bookmarkList = [CategoryCandidateRelationDAO selectCandidatesByCategory:self.electionCategory];
+        self.bookmarkList = [CategoryCandidateRelationDAO selectCandidatesByCategoryOrderedByTotalScore:self.electionCategory];
         self.addCandidateButton.enabled = true;
         self.searchButton.enabled = true;
         
-        NSData *jsonData = [JsonResolver createJsonAllDataFromCategory:self.electionCategory];
-        [JsonResolver resolveAndInsertDataFromJson:jsonData];
+        //NSData *jsonData = [JsonResolver createJsonAllDataFromCategory:self.electionCategory];
+        //[JsonResolver resolveAndInsertDataFromJson:jsonData];
     }
     
     return self.bookmarkList.count;
@@ -74,11 +79,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"CandidateCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    TDBadgedCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[TDBadgedCell alloc]
+                 initWithStyle:UITableViewCellStyleSubtitle
+                 reuseIdentifier:CellIdentifier];
+    }
     // Configure the cell...
     Bookmark *bm = self.bookmarkList[indexPath.row];
     cell.textLabel.text = bm.t_title;
+    cell.detailTextLabel.text = @"your score: - ";
+    
+    NSMutableArray* scoreArray = [BookmarkScoreDAO selectByBookmark:bm];
+    int totalScore = 0;
+    for(BookmarkScore *bs in scoreArray) {
+        totalScore += bs.i_score;
+        if ([bs.t_user isEqualToString:[UserSettingUtil getStringWithKey:USER_NAME]]) {
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"your score: %i",bs.i_score];
+        }
+    }
+    
+    cell.badgeString = [NSString stringWithFormat:@"%i",totalScore];
+    cell.badgeColor = [UIColor orangeColor];
+    
+    if (indexPath.row == 0) {
+        cell.backgroundColor = [UIColor colorWithRed:0.6 green:0.8 blue:0.9 alpha:0.2];
+    }
+    
     
     return cell;
 }
@@ -208,12 +235,14 @@
 
 
 - (IBAction)clickedActionButton:(id)sender {
-    NSData *data = [Bookmark toJsonList:self.bookmarkList];
+    //NSData *data = [Bookmark toJsonList:self.bookmarkList];
+    NSData *data = [JsonResolver createJsonAllDataFromCategory:self.electionCategory];
+    /*
     NSArray* jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     for (NSDictionary *dict in jsonArray) {
         Bookmark *bmm = [[Bookmark alloc] initWithJson:dict];
         NSLog(@"%@", [bmm description]);
-    }
+    }*/
     NSString *jsonString = [FileUtil data2str:data];
     
     UIActivityViewController *activityCtr = [[UIActivityViewController alloc] initWithActivityItems:@[jsonString]
@@ -234,6 +263,8 @@
             [BookmarkScoreDAO insert:bs];
         }
     }
+    
+    [self.tableView reloadData];
 }
 
 @end

@@ -80,6 +80,7 @@
 		4DC2172717FC73D10033DF60 /* SettingScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2172517FC73D10033DF60 /* SettingScoreViewController.xib */; };
 		4DC2172917FC80F90033DF60 /* scheduleDBUpdate_5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2172817FC80F90033DF60 /* scheduleDBUpdate_5.txt */; };
 		4DC5D094180D25CF00E866AB /* JsonResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5D093180D25CF00E866AB /* JsonResolver.m */; };
+		4DC5D098180D579500E866AB /* TDBadgedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5D097180D579500E866AB /* TDBadgedCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,8 @@
 		4DC2172817FC80F90033DF60 /* scheduleDBUpdate_5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scheduleDBUpdate_5.txt; sourceTree = "<group>"; };
 		4DC5D092180D25CF00E866AB /* JsonResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonResolver.h; sourceTree = "<group>"; };
 		4DC5D093180D25CF00E866AB /* JsonResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonResolver.m; sourceTree = "<group>"; };
+		4DC5D096180D579500E866AB /* TDBadgedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDBadgedCell.h; sourceTree = "<group>"; };
+		4DC5D097180D579500E866AB /* TDBadgedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDBadgedCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -559,6 +562,7 @@
 		4DBEC22117FB0C1A00342156 /* ExternalLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				4DC5D095180D579500E866AB /* TableViewBadge */,
 				4DBEC22217FB0C1A00342156 /* BButton */,
 				4DBEC26317FB0C1B00342156 /* MBProgressHUD */,
 				4DBEC26617FB0C1B00342156 /* R9HTTPRequest */,
@@ -681,6 +685,15 @@
 				4DC2172517FC73D10033DF60 /* SettingScoreViewController.xib */,
 			);
 			path = Score;
+			sourceTree = "<group>";
+		};
+		4DC5D095180D579500E866AB /* TableViewBadge */ = {
+			isa = PBXGroup;
+			children = (
+				4DC5D096180D579500E866AB /* TDBadgedCell.h */,
+				4DC5D097180D579500E866AB /* TDBadgedCell.m */,
+			);
+			path = TableViewBadge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -833,6 +846,7 @@
 				4DBEC29417FB0C1B00342156 /* SFHFKeychainUtils.m in Sources */,
 				4DBEC27517FB0C1B00342156 /* BButton.m in Sources */,
 				4DBEC2B317FB1A4100342156 /* CandidatesListViewController.m in Sources */,
+				4DC5D098180D579500E866AB /* TDBadgedCell.m in Sources */,
 				4DBD8CFB17FFEA92004CBD3B /* CategoryListViewController.m in Sources */,
 				4DBEC21417FB0BD000342156 /* FMDatabaseAdditions.m in Sources */,
 				4DBEC21C17FB0BD000342156 /* SimpleNetwork.m in Sources */,

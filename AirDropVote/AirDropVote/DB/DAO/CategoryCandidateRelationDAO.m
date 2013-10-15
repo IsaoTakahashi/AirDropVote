@@ -8,6 +8,7 @@
 
 #import "CategoryCandidateRelationDAO.h"
 #import "SimpleDBManager.h"
+#import "UserSettingConstants.h"
 
 @implementation CategoryCandidateRelationDAO
 
@@ -105,6 +106,35 @@
                           AND ccr.t_candidate_url = bm.t_url) \
                        ORDER BY i_id ASC",
                        ec.t_title,ec.t_user];
+    [db hadError];
+    
+    while([rs next]) {
+        Bookmark *bm = [[Bookmark alloc] initWithResultSet:rs];
+        
+        [bookmarkArray addObject:bm];
+    }
+    
+    return bookmarkArray;
+}
+
++(NSMutableArray*)selectCandidatesByCategoryOrderedByTotalScore:(ElectionCategory*)ec {
+    SimpleDBManager* db = [SimpleDBManager getInstance];
+    
+    NSMutableArray* bookmarkArray = [NSMutableArray new];
+    
+    FMResultSet *rs = [db.connection executeQuery:@"SELECT bm.* \
+                       FROM BOOKMARK bm\
+                       WHERE bm.i_del_flg = 0 \
+                       AND EXISTS (SELECT * FROM CATEGORY_CANDIDATE_RELATION ccr\
+                       WHERE ccr.t_category_title = ? AND ccr.t_category_user = ? \
+                       AND ccr.t_candidate_title = bm.t_title \
+                       AND ccr.t_candidate_url = bm.t_url) \
+                       ORDER BY (SELECT total(i_score) FROM BOOKMARK_SCORE bs \
+                       WHERE bs.t_title = bm.t_title AND bs.t_url = bm.t_url\
+                       ) DESC, (SELECT total(i_score) FROM BOOKMARK_SCORE bs \
+                       WHERE bs.t_title = bm.t_title AND bs.t_url = bm.t_url AND bs.t_user = ?\
+                       ) DESC",
+                       ec.t_title,ec.t_user,[UserSettingUtil getStringWithKey:USER_NAME]];
     [db hadError];
     
     while([rs next]) {
